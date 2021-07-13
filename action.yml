@@ -20,3 +20,6 @@ runs:
     - run: echo ${{ github.action_path }}
       shell: cmd
     - run: cd ${{ github.action_path }} | dir
+      shell: cmd
+    - run: cd ${{ github.action_path }}\goodbye.sh
+      shell: cmd
