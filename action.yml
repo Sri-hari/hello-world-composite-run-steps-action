@@ -1,4 +1,4 @@
-name: 'HMOS Build'
+name: 'Hello World'
 description: 'build HMOS libraries'
 inputs:
   who-to-greet:  # id of input
@@ -17,5 +17,6 @@ runs:
     - id: random-number-generator
       run: echo "::set-output name=random-id::$(echo $RANDOM)"
       shell: cmd
-    - run: ${{ github.action_path }}\goodbye.sh
+    - run: echo ${{ github.action_path }}
       shell: cmd
+    - run: cd ${{ github.action_path }} | dir
